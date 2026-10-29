@@ -1,0 +1,11 @@
+[project]
+name = "mcp-message-bridge"
+version = "0.1.0"
+description = "A local, authenticated, explicit-text MCP message queue for independent clients."
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.30,<2"]
+
+[project.scripts]
+message-bridge = "message_bridge.server:main"
+message-bridge-init = "message_bridge.setup_auth:main"
+message-bridge-watch = "message_bridge.watcher:main"
